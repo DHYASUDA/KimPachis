@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+  <title>Login_System</title>
+</head>
+
+  <body>
+
+<form action="includesTest/signup.php method="POSTS">
+<input type="text" name="firstName" placeholder="First Name"> <br>
+<input type="text" name="lastName" placeholder="Last Name"> <br>
+<input type="text" name="email" placeholder="E-Mail"> <br>
+<input type="password" name="pwd" placeholder="Password"> <br>
+<button type="submit" name="submit"> Sign up! </button>
+</form>
+</body>
+
+
+</html>
+
+// New file in a child folder inside the html DB.php 
+
+<?php
+
+$DBServerName = "localhost";  
+$DBUser = "root";
+$DBPwd = "";
+$DBname = "Insert Database name";
+
+$conn = mysqli_connect($DBServerName, $DBUser, $DBPwd, $DBname);
+
+
+// new file in a child folder inside the html signup.
+
+<?php
+
+INCLUDE_ONCE DB file
+
+$first = $_POST['firstName'];
+$last = $_POST['lastName'];
+$email = $_POST['email'];
+$pwd = $_POST['pwd'];
+
+$sql = "INSERT INTO XYZ (DATABASE FIELDS) VALUES ('$first','$last','$email','$pwd');";
+mysqli_query($conn, $sql)
+
+header (Location ../(HREF)?signup=success)
+
+
+//MYSQLI CODE 
+
+CREATE TABLE XYZ (
+  ID int(128) not null primary key AUTO_INCREMENT,
+  name varchar(10) not null,
+  last varchar(10) not null,
+  password LONGTEXT not null,
+  email varchar(20) not null
+  );
+
